@@ -1,12 +1,12 @@
 package ar.edu.unju.edm;
 
 public class Calculadora {
-	    //atributos
+	    //Atributos
 		private int numero1;
 		private int numero2;
 		
 		
-		//constructores
+		//Constructores
 		
 		public Calculadora() {
 			
@@ -19,7 +19,7 @@ public class Calculadora {
 			
 		}
 		
-		//methods basics operations
+		//Metodos de operaciones basicas
 		
 		public int suma() {
 			int resultadosuma=this.numero1 + this.numero2;
@@ -48,8 +48,8 @@ public class Calculadora {
 			
 		}
 
-		//Tengo que generar el get y set para encapsular los atributos
-		//Ya que estan privados y con esto yo lo puedo modificar o obtener sus valores
+		//Se debe generar el "get" y "set" para encapsular los atributos
+		//Ya que estos se encuentran privados y con esto yo los puedo modificar o obtener sus valores
 		
 		public int getNumero1() {
 			return numero1;

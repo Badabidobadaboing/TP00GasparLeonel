@@ -12,13 +12,13 @@ public class Tp00GasparLeonelApplication {
 		String nombre = "Leonel";
 		System.out.println("hola edm,dice:  "+ nombre + " " + darNombre());
 		
-		//aqui el numero 10 se pasa al numero1 y el 2 al numero2
+		//El numero 10 se pasa al numero1 y el 2 al numero2
 		Calculadora miCalculadora = new Calculadora(10,0);
 		
 		int suma=miCalculadora.suma();
 		System.out.println("la suma es: "+suma);
 		
-		//una forma de simplificar la operacion anterior:
+		//Simplificando la operacion anterior:
 		System.out.println("la resta es: "+  miCalculadora.resta());
 		
 		System.out.println("la multiplicacion es: "+ miCalculadora.multiplicar());
