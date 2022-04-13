@@ -1,4 +1,4 @@
-package ar.edu.unju.edm;
+package ar.edu.unju.edm.model;
 
 public class Calculadora {
 	    //Atributos
@@ -47,6 +47,22 @@ public class Calculadora {
 			}
 			
 		}
+		
+		public int potencia() {
+			double resultadopotencia=Math. pow((double)this.numero1,(double)this.numero2);
+			return (int) resultadopotencia;	
+		}
+		
+		public int raiz() {
+			double resultadoraiz= Math.sqrt((double)this.numero1);
+			return (int) resultadoraiz;	
+		}
+		
+		public double raizn() {
+			double resultadoraizn=Math. pow((double)this.numero1,(double)1/this.numero2);
+			return resultadoraizn;	
+		}
+
 
 		//Se debe generar el "get" y "set" para encapsular los atributos
 		//Ya que estos se encuentran privados y con esto yo los puedo modificar o obtener sus valores
@@ -66,5 +82,7 @@ public class Calculadora {
 		public void setNumero2(int numero2) {
 			this.numero2 = numero2;
 		}
+		
+		
 
 }

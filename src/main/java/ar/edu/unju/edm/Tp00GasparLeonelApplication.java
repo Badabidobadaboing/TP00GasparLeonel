@@ -3,6 +3,8 @@ package ar.edu.unju.edm;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import ar.edu.unju.edm.model.Calculadora;
+
 @SpringBootApplication
 public class Tp00GasparLeonelApplication {
 
@@ -13,7 +15,7 @@ public class Tp00GasparLeonelApplication {
 		System.out.println("hola edm,dice:  "+ nombre + " " + darNombre());
 		
 		//El numero 10 se pasa al numero1 y el 2 al numero2
-		Calculadora miCalculadora = new Calculadora(10,0);
+		Calculadora miCalculadora = new Calculadora(125,3);
 		
 		int suma=miCalculadora.suma();
 		System.out.println("la suma es: "+suma);
@@ -22,6 +24,12 @@ public class Tp00GasparLeonelApplication {
 		System.out.println("la resta es: "+  miCalculadora.resta());
 		
 		System.out.println("la multiplicacion es: "+ miCalculadora.multiplicar());
+		
+		System.out.println("la potencia es: "+ miCalculadora.potencia());
+		
+		System.out.println("la raiz es: "+ miCalculadora.raiz());
+		
+		System.out.println("la raiz n es: "+ miCalculadora.raizn());
 		
 		double dividir = miCalculadora.dividir();
 		if(dividir==0) {
