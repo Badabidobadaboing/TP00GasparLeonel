@@ -14,26 +14,25 @@ public class CalculadoraController {
 	
     @GetMapping("/menu")
     /*
-     * get mapping(siempre comienza con mayus)
-     *  es una anotacion que basicamente dice 
-     * q cuando llamemos a /menu nos tiene q devolver el
-     * browser(index)
-     * 
+     * get mapping (siempre debe comenzar con mayuscula)
+     * es una anotacion que indica que cuando 
+     * llamemos a /menu este nos debe devolver el
+     * browser(index) 
      */
     
 	public String obtenerMenu () {
 	
 	
-	return ("index");//devolvemos la pagina que creamos para el menu
+	return ("index");//Se devuelve la pagina que creamos para el menu
 		
 }
     @GetMapping("/calculoSuma")
     public String getSuma(@RequestParam(name="num1")int num1,@RequestParam(name="num2")int num2,Model model) {
     	int resultadoS;
-    	Calculadora nuevaCalculadora = new Calculadora();
-    	nuevaCalculadora.setNumero1(num1);
-    	nuevaCalculadora.setNumero2(num2);
-    	resultadoS=nuevaCalculadora.suma();
+    	Calculadora NuevaCalculadora = new Calculadora();
+    	NuevaCalculadora.setNumero1(num1);
+    	NuevaCalculadora.setNumero2(num2);
+    	resultadoS=NuevaCalculadora.suma();
     	model.addAttribute("resultadoS", resultadoS);
     	
     	
@@ -44,10 +43,10 @@ public class CalculadoraController {
     @GetMapping("/calculoResta")
     public String getResta(@RequestParam(name="num1")int num1,@RequestParam(name="num2")int num2,Model model) {
     	int resultadoR;
-    	Calculadora nuevaCalculadora = new Calculadora();
-    	nuevaCalculadora.setNumero1(num1);
-    	nuevaCalculadora.setNumero2(num2);
-    	resultadoR=nuevaCalculadora.resta();
+    	Calculadora NuevaCalculadora = new Calculadora();
+    	NuevaCalculadora.setNumero1(num1);
+    	NuevaCalculadora.setNumero2(num2);
+    	resultadoR=NuevaCalculadora.resta();
     	model.addAttribute("resultadoR", resultadoR);
     	
     	
@@ -58,10 +57,10 @@ public class CalculadoraController {
     @GetMapping("/calculoMultiplica")
     public String getMultiplica(@RequestParam(name="num1")int num1,@RequestParam(name="num2")int num2,Model model) {
     	int resultadoM;
-    	Calculadora nuevaCalculadora = new Calculadora();
-    	nuevaCalculadora.setNumero1(num1);
-    	nuevaCalculadora.setNumero2(num2);
-    	resultadoM=nuevaCalculadora.multiplicar();
+    	Calculadora NuevaCalculadora = new Calculadora();
+    	NuevaCalculadora.setNumero1(num1);
+    	NuevaCalculadora.setNumero2(num2);
+    	resultadoM=NuevaCalculadora.multiplicar();
     	model.addAttribute("resultadomult", resultadoM);
     	
     	
@@ -73,10 +72,10 @@ public class CalculadoraController {
     @GetMapping("/calculoDivide")
     public String getDivide(@RequestParam(name="num1")int num1,@RequestParam(name="num2")int num2,Model model) {
     	double resultadoD;
-    	Calculadora nuevaCalculadora = new Calculadora();
-    	nuevaCalculadora.setNumero1(num1);
-    	nuevaCalculadora.setNumero2(num2);
-    	resultadoD=nuevaCalculadora.dividir();
+    	Calculadora NuevaCalculadora = new Calculadora();
+    	NuevaCalculadora.setNumero1(num1);
+    	NuevaCalculadora.setNumero2(num2);
+    	resultadoD=NuevaCalculadora.dividir();
     	model.addAttribute("resultadodiv", resultadoD);
     	
     	
@@ -88,9 +87,9 @@ public class CalculadoraController {
     @GetMapping("/calculoRaiz")
     public String getRaiz(@RequestParam(name="num1")int num1,Model model) {
     	int resultadoRaiz;
-    	Calculadora nuevaCalculadora = new Calculadora();
-    	nuevaCalculadora.setNumero1(num1);
-    	resultadoRaiz=nuevaCalculadora.raiz();
+    	Calculadora NuevaCalculadora = new Calculadora();
+    	NuevaCalculadora.setNumero1(num1);
+    	resultadoRaiz=NuevaCalculadora.raiz();
     	model.addAttribute("resultadoraiz", resultadoRaiz);
     	
     	
@@ -102,10 +101,10 @@ public class CalculadoraController {
     @GetMapping("/calculoRaizN")
     public String getRaizN(@RequestParam(name="num1")int num1,@RequestParam(name="num2")int num2,Model model) {
     	double resultadoRN;
-    	Calculadora nuevaCalculadora = new Calculadora();
-    	nuevaCalculadora.setNumero1(num1);
-    	nuevaCalculadora.setNumero2(num2);
-    	resultadoRN=nuevaCalculadora.raizn();
+    	Calculadora NuevaCalculadora = new Calculadora();
+    	NuevaCalculadora.setNumero1(num1);
+    	NuevaCalculadora.setNumero2(num2);
+    	resultadoRN=NuevaCalculadora.raizn();
     	model.addAttribute("resultadoRN", resultadoRN);
     	
     	
@@ -117,19 +116,15 @@ public class CalculadoraController {
     @GetMapping("/calculoPotencia")
     public String getPotencia(@RequestParam(name="num1")int num1,@RequestParam(name="num2")int num2,Model model) {
     	int resultadoP;
-    	Calculadora nuevaCalculadora = new Calculadora();
-    	nuevaCalculadora.setNumero1(num1);
-    	nuevaCalculadora.setNumero2(num2);
-    	resultadoP=nuevaCalculadora.potencia();
+    	Calculadora NuevaCalculadora = new Calculadora();
+    	NuevaCalculadora.setNumero1(num1);
+    	NuevaCalculadora.setNumero2(num2);
+    	resultadoP=NuevaCalculadora.potencia();
     	model.addAttribute("resultadopot", resultadoP);
     	
     	
     	
     	return "resultadopot";
     }      
-
-
-
-
-        
+    
 }
